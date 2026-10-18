@@ -2,6 +2,7 @@
   border: 1px solid var(--brux-color-border);
   border-radius: var(--brux-radius-md);
   color: var(--brux-color-text);
+  container-type: inline-size;
   transition: background-color var(--brux-duration-base) var(--brux-ease-standard), border-color var(--brux-duration-base) var(--brux-ease-standard), box-shadow var(--brux-duration-base) var(--brux-ease-standard);
 }
 
@@ -76,7 +77,7 @@
   padding-top: var(--brux-space-4);
 }
 
-@media (min-width: 40rem) {
+@container (min-width: 40rem) {
   .brux-card-footer {
     flex-direction: row;
     justify-content: end;
