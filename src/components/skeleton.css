@@ -4,11 +4,11 @@
 }
 
 .brux-skeleton--default {
-  background: var(--brux-color-surface-alt);
+  background: var(--brux-skeleton-background);
 }
 
 .brux-skeleton--contrast {
-  background: var(--brux-color-border);
+  background: var(--brux-skeleton-contrast);
 }
 
 @keyframes brux-skeleton-pulse {
@@ -18,7 +18,7 @@
   }
 
   50% {
-    opacity: 0.5;
+    opacity: 0.75;
   }
 }
 

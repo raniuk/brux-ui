@@ -143,4 +143,6 @@
   --brux-button-background-hover: var(--brux-color-indigo-500);
   --brux-button-focus-ring: var(--brux-color-accent);
   --brux-size-sidebar: 16rem;
+  --brux-skeleton-background: var(--brux-color-surface-alt);
+  --brux-skeleton-contrast: var(--brux-color-border);
 }
