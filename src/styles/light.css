@@ -1,0 +1,17 @@
+:root,
+[data-brux-theme='light'] {
+  color-scheme: light;
+  --brux-color-canvas: var(--brux-color-neutral-0);
+  --brux-color-surface: var(--brux-color-slate-50);
+  --brux-color-surface-alt: var(--brux-color-slate-100);
+  --brux-color-text: var(--brux-color-slate-900);
+  --brux-color-text-muted: var(--brux-color-slate-500);
+  --brux-color-border: var(--brux-color-slate-200);
+  --brux-color-primary: var(--brux-color-indigo-600);
+  --brux-color-secondary: var(--brux-color-violet-600);
+  --brux-color-accent: var(--brux-color-cyan-500);
+  --brux-color-success: var(--brux-color-green-600);
+  --brux-color-warning: var(--brux-color-amber-600);
+  --brux-color-danger: var(--brux-color-red-600);
+  --brux-color-info: var(--brux-color-sky-600);
+}

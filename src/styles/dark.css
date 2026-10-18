@@ -1,0 +1,27 @@
+[data-brux-theme='dark'] {
+  color-scheme: dark;
+  --brux-color-canvas: var(--brux-color-zinc-950);
+  --brux-color-surface: var(--brux-color-zinc-900);
+  --brux-color-surface-alt: var(--brux-color-zinc-800);
+  --brux-color-text: var(--brux-color-slate-50);
+  --brux-color-text-muted: var(--brux-color-slate-400);
+  --brux-color-border: var(--brux-color-zinc-700);
+  --brux-color-primary: var(--brux-color-indigo-400);
+  --brux-color-secondary: var(--brux-color-violet-400);
+  --brux-color-accent: var(--brux-color-cyan-500);
+  --brux-color-success: var(--brux-color-green-400);
+  --brux-color-warning: var(--brux-color-amber-400);
+  --brux-color-danger: var(--brux-color-red-400);
+  --brux-color-info: var(--brux-color-sky-400);
+  --brux-color-primary-solid: var(--brux-color-indigo-500);
+  --brux-color-success-solid: var(--brux-color-green-500);
+  --brux-color-warning-solid: var(--brux-color-amber-500);
+  --brux-color-danger-solid: var(--brux-color-red-500);
+  --brux-color-success-hover: var(--brux-color-green-600);
+  --brux-color-warning-hover: var(--brux-color-amber-600);
+  --brux-color-danger-hover: var(--brux-color-red-600);
+  --brux-shadow-color: 0 0 0;
+  --brux-gradient-brand: linear-gradient(135deg, var(--brux-color-indigo-400) 0%, var(--brux-color-violet-400) 100%);
+  --brux-gradient-brand-solid: linear-gradient(135deg, var(--brux-color-indigo-500) 0%, var(--brux-color-violet-500) 100%);
+  --brux-gradient-brand-hover: linear-gradient(135deg, var(--brux-color-indigo-600) 0%, var(--brux-color-violet-600) 100%);
+}
