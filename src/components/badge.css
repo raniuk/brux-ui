@@ -1,0 +1,23 @@
+.brux-badge {
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: var(--brux-radius-sm);
+  display: inline-flex;
+  font-size: var(--brux-font-size-xs);
+  font-weight: var(--brux-font-weight-semibold);
+  gap: var(--brux-space-1);
+  line-height: var(--brux-line-height-none);
+  padding: var(--brux-space-1) var(--brux-space-2);
+  white-space: nowrap;
+}
+
+.brux-badge--icon { height: 1.5rem; justify-content: center; padding: 0; width: 1.5rem; }
+.brux-badge--neutral { background: var(--brux-color-surface-alt); border-color: var(--brux-color-border); color: var(--brux-color-text-muted); }
+.brux-badge--primary { background: color-mix(in srgb, var(--brux-color-primary) 12%, var(--brux-color-surface)); border-color: color-mix(in srgb, var(--brux-color-primary) 30%, var(--brux-color-border)); color: var(--brux-color-primary); }
+.brux-badge--secondary { background: color-mix(in srgb, var(--brux-color-secondary) 12%, var(--brux-color-surface)); border-color: color-mix(in srgb, var(--brux-color-secondary) 30%, var(--brux-color-border)); color: var(--brux-color-secondary); }
+.brux-badge--success { background: color-mix(in srgb, var(--brux-color-success) 12%, var(--brux-color-surface)); border-color: color-mix(in srgb, var(--brux-color-success) 30%, var(--brux-color-border)); color: var(--brux-color-success); }
+.brux-badge--warning { background: color-mix(in srgb, var(--brux-color-warning) 12%, var(--brux-color-surface)); border-color: color-mix(in srgb, var(--brux-color-warning) 30%, var(--brux-color-border)); color: var(--brux-color-warning); }
+.brux-badge--info { background: color-mix(in srgb, var(--brux-color-info) 12%, var(--brux-color-surface)); border-color: color-mix(in srgb, var(--brux-color-info) 30%, var(--brux-color-border)); color: var(--brux-color-info); }
+.brux-badge--accent { background: color-mix(in srgb, var(--brux-color-accent) 12%, var(--brux-color-surface)); border-color: color-mix(in srgb, var(--brux-color-accent) 30%, var(--brux-color-border)); color: var(--brux-color-accent); }
+.brux-badge--danger { background: color-mix(in srgb, var(--brux-color-danger) 12%, var(--brux-color-surface)); border-color: color-mix(in srgb, var(--brux-color-danger) 30%, var(--brux-color-border)); color: var(--brux-color-danger); }
+.brux-badge--outline { background: transparent; border-color: var(--brux-color-border); color: var(--brux-color-text); }
