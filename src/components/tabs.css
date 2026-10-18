@@ -28,11 +28,6 @@
   transition: background-color var(--brux-duration-base) var(--brux-ease-standard), border-color var(--brux-duration-base) var(--brux-ease-standard), color var(--brux-duration-base) var(--brux-ease-standard);
 }
 
-.brux-tabs-trigger:focus-visible {
-  outline: 2px solid var(--brux-button-focus-ring);
-  outline-offset: 2px;
-}
-
 .brux-tabs-trigger:disabled {
   cursor: not-allowed;
   opacity: 0.55;
@@ -53,6 +48,11 @@
   color: var(--brux-color-text);
 }
 
+.brux-tabs-trigger--underline:focus-visible {
+  border-color: var(--brux-color-accent);
+  outline: none;
+}
+
 .brux-tabs-trigger--vertical {
   border-left: 2px solid transparent;
   border-radius: var(--brux-radius-sm);
@@ -69,6 +69,11 @@
   background: var(--brux-color-surface-alt);
   border-color: var(--brux-color-primary);
   color: var(--brux-color-text);
+}
+
+.brux-tabs-trigger--vertical:focus-visible {
+  border-color: var(--brux-color-accent);
+  outline: none;
 }
 
 .brux-tabs-content {
