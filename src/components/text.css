@@ -1,0 +1,40 @@
+.brux-text {
+  line-height: var(--brux-line-height-relaxed);
+  margin: 0;
+}
+
+.brux-text--xs {
+  font-size: var(--brux-font-size-xs);
+}
+
+.brux-text--sm {
+  font-size: var(--brux-font-size-sm);
+}
+
+.brux-text--md {
+  font-size: var(--brux-font-size-md);
+}
+
+.brux-text--lg {
+  font-size: var(--brux-font-size-lg);
+}
+
+.brux-text--primary {
+  color: var(--brux-color-text);
+}
+
+.brux-text--secondary {
+  color: var(--brux-color-text-muted);
+}
+
+.brux-text--muted {
+  color: color-mix(in srgb, var(--brux-color-text-muted) 80%, transparent);
+}
+
+.brux-text--success {
+  color: var(--brux-color-success);
+}
+
+.brux-text--danger {
+  color: var(--brux-color-danger);
+}

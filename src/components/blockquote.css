@@ -1,0 +1,24 @@
+.brux-blockquote {
+  background: var(--brux-color-surface);
+  border-left: 3px solid var(--brux-color-primary);
+  border-radius: 0 var(--brux-radius-md) var(--brux-radius-md) 0;
+  color: var(--brux-color-text);
+  font-family: var(--brux-font-display);
+  font-size: var(--brux-font-size-lg);
+  font-style: italic;
+  line-height: var(--brux-line-height-relaxed);
+  margin: 0;
+  padding: var(--brux-space-4) var(--brux-space-6);
+}
+
+.brux-blockquote-attribution {
+  color: var(--brux-color-text-muted);
+  font-size: var(--brux-font-size-sm);
+  font-style: normal;
+  font-weight: var(--brux-font-weight-semibold);
+  margin-top: var(--brux-space-3);
+}
+
+.brux-blockquote-attribution cite {
+  font-style: normal;
+}

@@ -1,0 +1,27 @@
+.brux-avatar {
+  background: var(--brux-color-surface-alt);
+  border: 1px solid var(--brux-color-border);
+  border-radius: var(--brux-radius-circle);
+  display: inline-flex;
+  flex: 0 0 auto;
+  height: 2.5rem;
+  overflow: hidden;
+  width: 2.5rem;
+}
+
+.brux-avatar__image {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.brux-avatar__fallback {
+  align-items: center;
+  color: var(--brux-color-text-muted);
+  display: flex;
+  font-size: var(--brux-font-size-sm);
+  font-weight: var(--brux-font-weight-semibold);
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}

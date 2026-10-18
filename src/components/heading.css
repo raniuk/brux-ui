@@ -1,0 +1,27 @@
+.brux-heading {
+  color: var(--brux-color-text);
+  font-family: var(--brux-font-display);
+  font-weight: var(--brux-font-weight-semibold);
+  letter-spacing: var(--brux-letter-spacing-tighter);
+  margin: 0;
+}
+
+.brux-heading--sm {
+  font-size: var(--brux-font-size-lg);
+  line-height: 1.75rem;
+}
+
+.brux-heading--md {
+  font-size: var(--brux-font-size-2xl);
+  line-height: 2rem;
+}
+
+.brux-heading--lg {
+  font-size: var(--brux-font-size-3xl);
+  line-height: 2.25rem;
+}
+
+.brux-heading--xl {
+  font-size: var(--brux-font-size-4xl);
+  line-height: 2.5rem;
+}

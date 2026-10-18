@@ -1,0 +1,58 @@
+.brux-list {
+  color: var(--brux-color-text);
+  margin: 0;
+  padding: 0;
+}
+
+.brux-list--divided {
+  list-style: none;
+}
+
+.brux-list--divided > .brux-list-item + .brux-list-item {
+  border-top: 1px solid var(--brux-color-border);
+}
+
+.brux-list--disc {
+  list-style: disc outside;
+  padding-left: var(--brux-space-6);
+}
+
+.brux-list--decimal {
+  list-style: decimal outside;
+  padding-left: var(--brux-space-6);
+}
+
+.brux-list--disc > .brux-list-item + .brux-list-item,
+.brux-list--decimal > .brux-list-item + .brux-list-item {
+  margin-top: var(--brux-space-2);
+}
+
+.brux-list--disc .brux-list-item,
+.brux-list--decimal .brux-list-item {
+  line-height: var(--brux-line-height-normal);
+}
+
+.brux-list--disc ::marker,
+.brux-list--decimal ::marker {
+  color: var(--brux-color-text-muted);
+}
+
+.brux-list-item--divided {
+  align-items: center;
+  display: flex;
+  gap: var(--brux-space-4);
+  justify-content: space-between;
+  padding: var(--brux-space-4) 0;
+}
+
+.brux-list-item--divided:first-child {
+  padding-top: 0;
+}
+
+.brux-list-item--divided:last-child {
+  padding-bottom: 0;
+}
+
+.brux-list-item--prose {
+  line-height: var(--brux-line-height-normal);
+}

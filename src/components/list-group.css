@@ -1,0 +1,94 @@
+.brux-list-group {
+  color: var(--brux-color-text);
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.brux-list-group--default {
+  background: var(--brux-color-canvas);
+  border: 1px solid var(--brux-color-border);
+  border-radius: var(--brux-radius-md);
+  box-shadow: var(--brux-elevation-1);
+}
+
+.brux-list-group--flush {
+  background: transparent;
+  border-bottom: 1px solid var(--brux-color-border);
+  border-top: 1px solid var(--brux-color-border);
+}
+
+.brux-list-group-item {
+  align-items: start;
+  display: flex;
+  gap: var(--brux-space-3);
+  padding: var(--brux-space-3) var(--brux-space-4);
+}
+
+.brux-list-group-item + .brux-list-group-item {
+  border-top: 1px solid var(--brux-color-border);
+}
+
+.brux-list-group-item--interactive {
+  cursor: pointer;
+  transition: background-color var(--brux-duration-base) var(--brux-ease-standard);
+}
+
+.brux-list-group-item--interactive:hover {
+  background: var(--brux-color-surface);
+}
+
+.brux-list-group-icon {
+  align-items: center;
+  background: var(--brux-color-surface);
+  border-radius: var(--brux-radius-sm);
+  color: var(--brux-color-text-muted);
+  display: inline-flex;
+  flex: 0 0 auto;
+  height: 2rem;
+  justify-content: center;
+  margin-top: var(--brux-space-0-5);
+  width: 2rem;
+}
+
+.brux-list-group-icon svg {
+  height: 1rem;
+  width: 1rem;
+}
+
+.brux-list-group-content {
+  display: grid;
+  flex: 1;
+  gap: var(--brux-space-1);
+  min-width: 0;
+}
+
+.brux-list-group-title {
+  color: var(--brux-color-text);
+  font-size: var(--brux-font-size-sm);
+  font-weight: var(--brux-font-weight-semibold);
+  line-height: var(--brux-line-height-comfortable);
+  margin: 0;
+}
+
+.brux-list-group-description {
+  color: var(--brux-color-text-muted);
+  font-size: var(--brux-font-size-sm);
+  line-height: var(--brux-line-height-normal);
+  margin: 0;
+}
+
+.brux-list-group-action {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: var(--brux-space-2);
+  margin-left: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brux-list-group-item--interactive {
+    transition: none;
+  }
+}

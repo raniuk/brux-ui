@@ -1,0 +1,47 @@
+.brux-link {
+  border-radius: var(--brux-radius-sm);
+  font-weight: var(--brux-font-weight-semibold);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+  transition: color var(--brux-duration-base) var(--brux-ease-standard);
+}
+
+.brux-link:focus-visible {
+  outline: 2px solid var(--brux-button-focus-ring);
+  outline-offset: 2px;
+}
+
+.brux-link--default {
+  color: var(--brux-color-primary);
+  text-decoration: underline;
+}
+
+.brux-link--default:hover {
+  text-decoration-thickness: 2px;
+}
+
+.brux-link--subtle {
+  color: var(--brux-color-primary);
+  text-decoration: none;
+}
+
+.brux-link--subtle:hover {
+  text-decoration: underline;
+}
+
+.brux-link--muted {
+  color: var(--brux-color-text-muted);
+  font-weight: var(--brux-font-weight-regular);
+  text-decoration: none;
+}
+
+.brux-link--muted:hover {
+  color: var(--brux-color-text);
+  text-decoration: underline;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brux-link {
+    transition: none;
+  }
+}
