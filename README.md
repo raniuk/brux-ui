@@ -5,7 +5,7 @@ A design system for React, distributed as a single Git-installed package (not np
 ## Installation
 
 ```bash
-pnpm add git+https://github.com/raniuk/brux-ui.git#v0.1.0
+pnpm add git+https://github.com/raniuk/brux-ui.git#v0.2.0
 ```
 
 Use Git tags for reproducible installs. Avoid installing from `main` in production applications.
