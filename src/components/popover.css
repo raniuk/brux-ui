@@ -1,0 +1,40 @@
+.brux-popover-content {
+  animation: brux-popover-in var(--brux-duration-base) var(--brux-ease-out);
+  background: var(--brux-color-canvas);
+  border: 1px solid var(--brux-color-border);
+  border-radius: var(--brux-radius-lg);
+  box-shadow: var(--brux-elevation-3);
+  color: var(--brux-color-text);
+  font-size: var(--brux-font-size-sm);
+  padding: var(--brux-space-4);
+  z-index: var(--brux-z-popover);
+}
+
+.brux-popover-content[data-state='closed'] {
+  animation-name: brux-popover-out;
+}
+
+.brux-popover-content:focus-visible {
+  outline: 2px solid var(--brux-button-focus-ring);
+  outline-offset: 2px;
+}
+
+.brux-popover-arrow {
+  fill: var(--brux-color-canvas);
+}
+
+@keyframes brux-popover-in {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes brux-popover-out {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.97); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brux-popover-content {
+    animation: none;
+  }
+}

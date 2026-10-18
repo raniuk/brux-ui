@@ -1,0 +1,147 @@
+.brux-dialog-overlay {
+  animation: brux-dialog-overlay-in var(--brux-duration-base) var(--brux-ease-out);
+  background: color-mix(in srgb, var(--brux-color-text) 45%, transparent);
+  inset: 0;
+  position: fixed;
+  z-index: var(--brux-z-overlay);
+}
+
+.brux-dialog-overlay[data-state='closed'] {
+  animation-name: brux-dialog-overlay-out;
+}
+
+.brux-dialog-content {
+  animation: brux-dialog-content-in var(--brux-duration-slow) var(--brux-ease-out);
+  background: var(--brux-color-surface);
+  border: 1px solid var(--brux-color-border);
+  border-radius: var(--brux-radius-lg);
+  box-shadow: var(--brux-elevation-4);
+  color: var(--brux-color-text);
+  display: grid;
+  gap: var(--brux-space-4);
+  left: 50%;
+  max-height: calc(100vh - var(--brux-space-6));
+  overflow-y: auto;
+  padding: var(--brux-space-6);
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - var(--brux-space-6));
+  z-index: var(--brux-z-overlay-content);
+}
+
+.brux-dialog-content[data-state='closed'] {
+  animation-name: brux-dialog-content-out;
+}
+
+.brux-dialog-content--sm {
+  max-width: 24rem;
+}
+
+.brux-dialog-content--md {
+  max-width: 32rem;
+}
+
+.brux-dialog-content--lg {
+  max-width: 40rem;
+}
+
+.brux-dialog-content--xl {
+  max-width: 48rem;
+}
+
+.brux-dialog-content--full {
+  max-width: none;
+}
+
+.brux-dialog-close {
+  align-items: center;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--brux-radius-sm);
+  color: var(--brux-color-text-muted);
+  cursor: pointer;
+  display: inline-flex;
+  height: 2rem;
+  justify-content: center;
+  position: absolute;
+  right: var(--brux-space-4);
+  top: var(--brux-space-4);
+  width: 2rem;
+}
+
+.brux-dialog-close:hover {
+  background: var(--brux-color-surface-alt);
+  color: var(--brux-color-text);
+}
+
+.brux-dialog-close:focus-visible {
+  outline: 2px solid var(--brux-button-focus-ring);
+  outline-offset: 2px;
+}
+
+.brux-dialog-close svg {
+  height: 1rem;
+  width: 1rem;
+}
+
+.brux-dialog-header {
+  display: grid;
+  gap: var(--brux-space-2);
+  padding-right: var(--brux-space-6);
+  text-align: left;
+}
+
+.brux-dialog-title {
+  font-size: var(--brux-font-size-lg);
+  font-weight: var(--brux-font-weight-semibold);
+  line-height: var(--brux-line-height-tight);
+  margin: 0;
+}
+
+.brux-dialog-description {
+  color: var(--brux-color-text-muted);
+  font-size: var(--brux-font-size-sm);
+  line-height: var(--brux-line-height-normal);
+  margin: 0;
+}
+
+.brux-dialog-footer {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: var(--brux-space-2);
+}
+
+@keyframes brux-dialog-overlay-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes brux-dialog-overlay-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes brux-dialog-content-in {
+  from { opacity: 0; transform: translate(-50%, -48%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+@keyframes brux-dialog-content-out {
+  from { opacity: 1; transform: translate(-50%, -50%); }
+  to { opacity: 0; transform: translate(-50%, -48%); }
+}
+
+@media (min-width: 40rem) {
+  .brux-dialog-footer {
+    flex-direction: row;
+    justify-content: end;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brux-dialog-overlay,
+  .brux-dialog-content {
+    animation: none;
+  }
+}

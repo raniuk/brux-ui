@@ -1,0 +1,36 @@
+.brux-tooltip-content {
+  animation: brux-tooltip-in var(--brux-duration-fast) var(--brux-ease-out);
+  background: var(--brux-color-text);
+  border-radius: var(--brux-radius-sm);
+  color: var(--brux-color-canvas);
+  font-size: var(--brux-font-size-sm);
+  font-weight: var(--brux-font-weight-medium);
+  line-height: var(--brux-line-height-comfortable);
+  max-width: 20rem;
+  padding: var(--brux-space-2) var(--brux-space-3);
+  z-index: var(--brux-z-popover);
+}
+
+.brux-tooltip-content[data-state='closed'] {
+  animation-name: brux-tooltip-out;
+}
+
+.brux-tooltip-arrow {
+  fill: var(--brux-color-text);
+}
+
+@keyframes brux-tooltip-in {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes brux-tooltip-out {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.96); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brux-tooltip-content {
+    animation: none;
+  }
+}
