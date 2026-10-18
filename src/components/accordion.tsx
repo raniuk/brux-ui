@@ -1,10 +1,28 @@
 'use client'
 
 import * as React from 'react'
+import { ChevronDown } from 'lucide-react'
 import { Accordion as AccordionPrimitive } from 'radix-ui'
 import { mergeClassNames } from '../lib/index.js'
 
-const Accordion = AccordionPrimitive.Root
+type AccordionVariant = 'grouped' | 'plain'
+
+export type AccordionProps = React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Root> & {
+  variant?: AccordionVariant
+}
+
+const Accordion = React.forwardRef<
+  React.ElementRef<typeof AccordionPrimitive.Root>,
+  AccordionProps
+>(({ className, variant = 'grouped', ...props }, ref) => (
+  <AccordionPrimitive.Root
+    ref={ref}
+    className={mergeClassNames('brux-accordion', `brux-accordion--${variant}`, className)}
+    {...props}
+  />
+))
+
+Accordion.displayName = 'Accordion'
 
 const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
@@ -26,7 +44,9 @@ const AccordionTrigger = React.forwardRef<
       {...props}
     >
       {children}
-      <span aria-hidden="true" className="brux-accordion-indicator" />
+      <span aria-hidden="true" className="brux-accordion-indicator">
+        <ChevronDown aria-hidden="true" />
+      </span>
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))

@@ -1,3 +1,20 @@
+.brux-accordion {
+  color: var(--brux-color-text);
+}
+
+.brux-accordion--grouped {
+  border: 1px solid var(--brux-color-border);
+  border-radius: var(--brux-radius-md);
+}
+
+.brux-accordion--grouped .brux-accordion-trigger {
+  padding-inline: var(--brux-space-4);
+}
+
+.brux-accordion--grouped .brux-accordion-content-inner {
+  padding-inline: var(--brux-space-4);
+}
+
 .brux-accordion-item {
   border-bottom: 1px solid var(--brux-color-border);
 }
@@ -39,21 +56,25 @@
 
 .brux-accordion-trigger:disabled {
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: 0.55;
+  pointer-events: none;
 }
 
 .brux-accordion-indicator {
-  border-bottom: 2px solid currentColor;
-  border-right: 2px solid currentColor;
+  align-items: center;
+  display: inline-flex;
   flex: 0 0 auto;
-  height: 0.5rem;
-  transform: rotate(45deg) translateY(-0.125rem);
+  justify-content: center;
   transition: transform var(--brux-duration-slow) var(--brux-ease-standard);
-  width: 0.5rem;
+}
+
+.brux-accordion-indicator svg {
+  height: 1rem;
+  width: 1rem;
 }
 
 .brux-accordion-trigger[data-state='open'] .brux-accordion-indicator {
-  transform: rotate(225deg) translateY(-0.125rem);
+  transform: rotate(180deg);
 }
 
 .brux-accordion-content {

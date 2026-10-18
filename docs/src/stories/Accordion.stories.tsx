@@ -8,7 +8,7 @@ const meta = {
     docs: {
       description: {
         component:
-          'Vertically stacked headings that reveal a panel. Use `type="single"` with `collapsible` for one panel at a time, or `type="multiple"` for several open panels. The indicator rotates when its panel opens.',
+          'Vertically stacked headings that reveal a panel. Use `type="single"` with `collapsible` for one panel at a time, or `type="multiple"` for several open panels. It renders as a framed group by default (`variant="grouped"`); pass `variant="plain"` when it already sits inside a framed surface such as `Card`, which would otherwise show a double border. The indicator rotates when its panel opens.',
       },
     },
   },
@@ -77,6 +77,24 @@ export const WithRichContent: Story = {
             <span>Updated: Today</span>
           </div>
         </AccordionContent>
+      </AccordionItem>
+    </Accordion>
+  ),
+}
+
+export const Plain: Story = {
+  args: { value: 'eligibility' },
+  render: () => (
+    <Accordion type="single" collapsible variant="plain" className="brux-doc-accordion">
+      <AccordionItem value="eligibility">
+        <AccordionTrigger>Who can request this service?</AccordionTrigger>
+        <AccordionContent>
+          Renders without its own frame. Use it inside a surface that already provides one, such as a card.
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="documents">
+        <AccordionTrigger>Which documents are required?</AccordionTrigger>
+        <AccordionContent>Identity document, proof of address, and the completed application form.</AccordionContent>
       </AccordionItem>
     </Accordion>
   ),
