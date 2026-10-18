@@ -26,17 +26,6 @@
   gap: var(--brux-space-4);
 }
 
-.brux-stepper--breadcrumb {
-  align-items: center;
-  background: var(--brux-color-surface);
-  border: 1px solid var(--brux-color-border);
-  border-radius: var(--brux-radius-md);
-  display: flex;
-  overflow: hidden;
-  padding: var(--brux-space-4);
-  width: 100%;
-}
-
 .brux-stepper--vertical {
   display: flex;
   flex-direction: column;
@@ -74,12 +63,6 @@
 .brux-stepper-item--detailed {
   align-items: center;
   gap: var(--brux-space-3);
-}
-
-.brux-stepper-item--breadcrumb {
-  align-items: center;
-  flex: 1;
-  overflow: hidden;
 }
 
 .brux-stepper-item--vertical {

@@ -12,13 +12,13 @@ const meta = {
   title: 'Components/Stepper',
   component: Stepper,
   argTypes: {
-    variant: { control: 'select', options: ['default', 'icon', 'detailed', 'breadcrumb', 'vertical'] },
+    variant: { control: 'select', options: ['default', 'icon', 'detailed', 'vertical'] },
   },
   parameters: {
     docs: {
       description: {
         component:
-          'Ordered progress steps. The current step is marked with `aria-current="step"`, completed steps show a check, and each `StepperItem` exposes its status through `data-status`. Variants: `default`, `icon`, `detailed`, `breadcrumb`, and `vertical`.',
+          'Ordered progress steps. The current step is marked with `aria-current="step"`, completed steps show a check, and each `StepperItem` exposes its status through `data-status`. Variants: `default`, `icon`, `detailed`, and `vertical`.',
       },
     },
   },
@@ -103,28 +103,6 @@ export const Vertical: Story = {
         <StepperContent>
           <StepperTitle>Review</StepperTitle>
           <StepperDescription>Committee evaluation.</StepperDescription>
-        </StepperContent>
-      </StepperItem>
-    </Stepper>
-  ),
-}
-
-export const Breadcrumb: Story = {
-  render: () => (
-    <Stepper variant="breadcrumb" aria-label="Request progress">
-      <StepperItem variant="breadcrumb" status="complete">
-        <StepperContent>
-          <StepperTitle>Application</StepperTitle>
-        </StepperContent>
-      </StepperItem>
-      <StepperItem variant="breadcrumb" status="current">
-        <StepperContent>
-          <StepperTitle>Documents</StepperTitle>
-        </StepperContent>
-      </StepperItem>
-      <StepperItem variant="breadcrumb" status="upcoming">
-        <StepperContent>
-          <StepperTitle>Review</StepperTitle>
         </StepperContent>
       </StepperItem>
     </Stepper>

@@ -3,7 +3,7 @@ import { mergeClassNames } from '../lib/index.js'
 import { Check } from 'lucide-react'
 
 type StepperStatus = 'complete' | 'current' | 'error' | 'upcoming'
-type StepperVariant = 'breadcrumb' | 'default' | 'detailed' | 'icon' | 'vertical'
+type StepperVariant = 'default' | 'detailed' | 'icon' | 'vertical'
 type StepperIndicatorSize = 'sm' | 'md' | 'lg'
 
 export interface StepperProps extends React.ComponentProps<'ol'> {
