@@ -1,0 +1,64 @@
+/* Brux UI stylesheet.
+ *
+ * Single style entry point. Cascade order:
+ *   1. tokens      — primitives, foundation, semantic defaults (light)
+ *   2. themes      — semantic token overrides per theme
+ *   3. components  — component stylesheets, consuming tokens only
+ *
+ * `@import` stays at the top so the bundler can inline every layer into
+ * dist/styles.css.
+ */
+@import './styles/tokens.css';
+@import './styles/light.css';
+@import './styles/dark.css';
+
+@import './components/base.css';
+@import './components/accordion.css';
+@import './components/alert.css';
+@import './components/alert-dialog.css';
+@import './components/avatar.css';
+@import './components/badge.css';
+@import './components/blockquote.css';
+@import './components/button.css';
+@import './components/button-group.css';
+@import './components/calendar.css';
+@import './components/card.css';
+@import './components/checkbox.css';
+@import './components/combobox.css';
+@import './components/data-table.css';
+@import './components/date-picker.css';
+@import './components/dialog.css';
+@import './components/dropdown-menu.css';
+@import './components/fieldset.css';
+@import './components/file-input.css';
+@import './components/file-upload.css';
+@import './components/form-field.css';
+@import './components/heading.css';
+@import './components/image.css';
+@import './components/input.css';
+@import './components/input-group.css';
+@import './components/label.css';
+@import './components/link.css';
+@import './components/list.css';
+@import './components/list-group.css';
+@import './components/navbar.css';
+@import './components/pagination.css';
+@import './components/password-requirements.css';
+@import './components/popover.css';
+@import './components/radio-group.css';
+@import './components/scroll-area.css';
+@import './components/search-input.css';
+@import './components/select.css';
+@import './components/separator.css';
+@import './components/sidebar.css';
+@import './components/skeleton.css';
+@import './components/spinner.css';
+@import './components/stepper.css';
+@import './components/switch.css';
+@import './components/table.css';
+@import './components/tabs.css';
+@import './components/text.css';
+@import './components/textarea.css';
+@import './components/toast.css';
+@import './components/tooltip.css';
+@import './components/user-list.css';
