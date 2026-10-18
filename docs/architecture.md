@@ -43,6 +43,8 @@ Icon sizing is a styling concern, not an icon concern: components size their `sv
 
 Every component stylesheet consumes tokens only — no raw colors, sizes, durations, or shadows. Themes override the semantic layer (colors) and the shadow color (`--brux-shadow-color`), so changing theme never changes a component API.
 
+Breakpoints are the one value that cannot be tokenized: a media query condition cannot read a custom property (`@media (min-width: var(--brux-x))` is invalid CSS) and `@custom-media` would require PostCSS, which the stack forbids. The two sanctioned values, `40rem` and `64rem`, are documented in `RULES.md` under **Responsive** instead.
+
 `src/tokens/index.ts` is the typed JavaScript bridge (`colors`, `radii`, `spacing`, `fontSizes`, `fontWeights`, `lineHeights`, `letterSpacings`, `durations`, `easings`, `elevations`, `zIndex`) for the cases where a token must travel through JS.
 
 ## Public entry points

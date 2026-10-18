@@ -121,7 +121,23 @@ Every component has exactly one stylesheet, `src/components/<name>.css`, importe
 - **Every interactive component needs a visible focus state.** Standalone controls use an offset `outline` (`2px`, `outline-offset: 2px`) driven by a focus-ring token; already-bordered fields such as `Input` also shift `border-color` to the primary token. See `src/components/button.css` and `src/components/input.css`.
 - **Disabled uses `cursor: not-allowed`, `opacity: 0.55`, and `pointer-events: none`** on `:disabled` and `[aria-disabled='true']`, for controls that cannot be natively disabled. `Button` also handles a `loading` state that implies disabled.
 - **Icons are sized in CSS**, not per call site: components size their `svg` descendants in the component stylesheet (`.brux-checkbox-indicator svg`, `.brux-dialog-close svg`), so every icon renders at the size its slot expects. `lucide-react` is imported directly by the components that need it — there is no icon wrapper layer, and no `Icon` component to route through.
-- **Layout is the consumer's job.** Component stylesheets style the component; app-level width, height, margin, and max-size belong in the consuming app or in Storybook-only styles under `docs/src/styles.css`.
+- **Layout is the consumer's job.** Component stylesheets style the component; app-level width, height, margin, and max-size belong in the consuming app or in Storybook-only styles under `docs/src/styles.css`. Two bounded exceptions are listed in **Responsive** below.
+
+## Responsive
+
+Layout is the consumer's job, with two exceptions. Every component is fluid by default — it fills its container and needs no breakpoint. Only these mechanisms may add one:
+
+| Mechanism | Use it for | Never use it for |
+| --- | --- | --- |
+| `@container (min-width: 40rem)` | A component whose internal layout depends on its own width: `Card`, `DataTable`, `Dialog`, `AlertDialog` | App chrome, or anything measured by the viewport |
+| `@media (min-width: 40rem \| 64rem)` | App chrome that owns the frame (`Sidebar`, `Navbar`) and the fixed `Toast` viewport | A content component |
+| `@media (prefers-reduced-motion: reduce)` | Any component with motion | — |
+
+- **Breakpoints are the only value that cannot be a token.** A media query condition cannot read a custom property — `@media (min-width: var(--brux-x))` is invalid CSS — and `@custom-media` would require PostCSS, which the stack forbids. This is the one exception to the token rules above.
+- **The allowed values are `40rem` (640px) and `64rem` (1024px).** Adding a third requires updating this section first.
+- **Prefer `@container` over `@media`.** A component must measure itself, never the app: a `Card` in a narrow sidebar of a wide desktop keeps a stacked footer, and a `Dialog size="sm"` stays stacked inside its own 24rem on a wide desktop.
+- **A container query needs `container-type: inline-size` on the container element** and targets that element's descendants. A container cannot style itself.
+- **`Stepper` keeps a viewport query.** `.brux-stepper` and `.brux-stepper--default` are the same element, and a container cannot style itself. Give it a wrapper element before moving it to `@container`.
 
 ## Token layering
 
