@@ -17,6 +17,7 @@
   border-radius: var(--brux-radius-lg);
   box-shadow: var(--brux-elevation-4);
   color: var(--brux-color-text);
+  container-type: inline-size;
   display: grid;
   gap: var(--brux-space-4);
   left: 50%;
@@ -132,7 +133,7 @@
   to { opacity: 0; transform: translate(-50%, -48%); }
 }
 
-@media (min-width: 40rem) {
+@container (min-width: 40rem) {
   .brux-dialog-footer {
     flex-direction: row;
     justify-content: end;
