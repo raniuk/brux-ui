@@ -1,0 +1,29 @@
+.brux-skeleton {
+  animation: brux-skeleton-pulse 1.6s ease-in-out infinite;
+  border-radius: var(--brux-radius-sm);
+}
+
+.brux-skeleton--default {
+  background: var(--brux-color-surface-alt);
+}
+
+.brux-skeleton--contrast {
+  background: var(--brux-color-border);
+}
+
+@keyframes brux-skeleton-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brux-skeleton {
+    animation: none;
+  }
+}

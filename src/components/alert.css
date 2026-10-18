@@ -1,0 +1,70 @@
+.brux-alert {
+  align-items: start;
+  border: 1px solid transparent;
+  border-radius: var(--brux-radius-md);
+  color: var(--brux-color-text);
+  display: grid;
+  gap: var(--brux-space-1) var(--brux-space-3);
+  grid-template-columns: minmax(0, 1fr);
+  padding: var(--brux-space-3) var(--brux-space-4);
+}
+
+.brux-alert:has(> svg) {
+  grid-template-columns: 1rem minmax(0, 1fr);
+}
+
+.brux-alert > svg {
+  grid-row: span 2;
+  height: 1rem;
+  margin-top: var(--brux-space-0-5);
+  width: 1rem;
+}
+
+.brux-alert--neutral {
+  background: var(--brux-color-surface-alt);
+  border-color: var(--brux-color-border);
+}
+
+.brux-alert--info {
+  background: color-mix(in srgb, var(--brux-color-info) 12%, var(--brux-color-surface));
+  border-color: color-mix(in srgb, var(--brux-color-info) 40%, var(--brux-color-border));
+  color: var(--brux-color-info);
+}
+
+.brux-alert--success {
+  background: color-mix(in srgb, var(--brux-color-success) 12%, var(--brux-color-surface));
+  border-color: color-mix(in srgb, var(--brux-color-success) 40%, var(--brux-color-border));
+  color: var(--brux-color-success);
+}
+
+.brux-alert--warning {
+  background: color-mix(in srgb, var(--brux-color-warning) 12%, var(--brux-color-surface));
+  border-color: color-mix(in srgb, var(--brux-color-warning) 40%, var(--brux-color-border));
+  color: var(--brux-color-warning);
+}
+
+.brux-alert--danger {
+  background: color-mix(in srgb, var(--brux-color-danger) 12%, var(--brux-color-surface));
+  border-color: color-mix(in srgb, var(--brux-color-danger) 40%, var(--brux-color-border));
+  color: var(--brux-color-danger);
+}
+
+.brux-alert--accent {
+  background: color-mix(in srgb, var(--brux-color-accent) 12%, var(--brux-color-surface));
+  border-color: color-mix(in srgb, var(--brux-color-accent) 40%, var(--brux-color-border));
+  color: var(--brux-color-accent);
+}
+
+.brux-alert-title {
+  font-size: var(--brux-font-size-sm);
+  font-weight: var(--brux-font-weight-semibold);
+  line-height: var(--brux-line-height-tight);
+  margin: 0;
+}
+
+.brux-alert-description {
+  color: var(--brux-color-text-muted);
+  font-size: var(--brux-font-size-sm);
+  line-height: var(--brux-line-height-normal);
+  margin: 0;
+}
