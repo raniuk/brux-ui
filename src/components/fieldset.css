@@ -1,0 +1,28 @@
+.brux-fieldset {
+  background: var(--brux-color-canvas);
+  border: 1px solid var(--brux-color-border);
+  border-radius: var(--brux-radius-md);
+  display: grid;
+  gap: var(--brux-space-4);
+  margin: 0;
+  min-width: 0;
+  padding: var(--brux-space-4);
+}
+
+.brux-fieldset:disabled {
+  opacity: 0.55;
+}
+
+.brux-fieldset-legend {
+  color: var(--brux-color-text);
+  font-size: var(--brux-font-size-sm);
+  font-weight: var(--brux-font-weight-semibold);
+  padding: 0 var(--brux-space-1);
+}
+
+.brux-fieldset-description {
+  color: var(--brux-color-text-muted);
+  font-size: var(--brux-font-size-sm);
+  line-height: var(--brux-line-height-normal);
+  margin: 0;
+}

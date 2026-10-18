@@ -1,0 +1,66 @@
+.brux-file-input {
+  background: var(--brux-color-surface);
+  border: 1px solid var(--brux-color-border);
+  border-radius: var(--brux-radius-md);
+  color: var(--brux-color-text);
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  padding: 0;
+  transition: border-color var(--brux-duration-base) var(--brux-ease-standard);
+  width: 100%;
+}
+
+.brux-file-input--sm {
+  font-size: var(--brux-font-size-sm);
+  min-height: 2rem;
+  padding-right: var(--brux-space-2);
+}
+
+.brux-file-input--md {
+  font-size: var(--brux-font-size-sm);
+  min-height: 2.5rem;
+  padding-right: var(--brux-space-3);
+}
+
+.brux-file-input--lg {
+  font-size: var(--brux-font-size-md);
+  min-height: 3rem;
+  padding-right: var(--brux-space-3);
+}
+
+.brux-file-input::file-selector-button {
+  background: var(--brux-color-canvas);
+  border: 0;
+  border-right: 1px solid var(--brux-color-border);
+  color: var(--brux-color-text);
+  cursor: pointer;
+  font: inherit;
+  font-weight: var(--brux-font-weight-semibold);
+  margin-right: var(--brux-space-3);
+  padding: var(--brux-space-2) var(--brux-space-3);
+}
+
+.brux-file-input::file-selector-button:hover {
+  background: var(--brux-color-surface);
+}
+
+.brux-file-input:focus-visible {
+  outline: none;
+  border-bottom-color: var(--brux-color-accent);
+}
+
+.brux-file-input:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.brux-file-input[aria-invalid='true'] {
+  border-color: var(--brux-color-danger);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brux-file-input {
+    transition: none;
+  }
+}

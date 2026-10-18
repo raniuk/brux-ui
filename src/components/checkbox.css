@@ -1,0 +1,46 @@
+.brux-checkbox {
+  align-items: center;
+  background: var(--brux-color-surface);
+  border: 1px solid var(--brux-color-border);
+  border-radius: var(--brux-radius-sm);
+  color: var(--brux-button-foreground);
+  cursor: pointer;
+  display: inline-flex;
+  flex: 0 0 auto;
+  height: 1.25rem;
+  justify-content: center;
+  transition: background-color var(--brux-duration-base) var(--brux-ease-standard), border-color var(--brux-duration-base) var(--brux-ease-standard);
+  width: 1.25rem;
+}
+
+.brux-checkbox[data-state='checked'] {
+  background: var(--brux-color-primary);
+  border-color: var(--brux-color-primary);
+}
+
+.brux-checkbox:focus-visible {
+  outline: 2px solid var(--brux-button-focus-ring);
+  outline-offset: 2px;
+}
+
+.brux-checkbox:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.brux-checkbox-indicator {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.brux-checkbox-indicator svg {
+  height: 1rem;
+  width: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brux-checkbox {
+    transition: none;
+  }
+}

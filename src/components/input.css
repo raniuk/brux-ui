@@ -1,0 +1,65 @@
+.brux-input {
+  background: var(--brux-color-surface);
+  border: 1px solid var(--brux-color-border);
+  border-radius: var(--brux-radius-md);
+  color: var(--brux-color-text);
+  display: flex;
+  font: inherit;
+  transition: border-color var(--brux-duration-base) var(--brux-ease-standard), box-shadow var(--brux-duration-base) var(--brux-ease-standard);
+  width: 100%;
+}
+
+.brux-input--sm {
+  font-size: var(--brux-font-size-sm);
+  min-height: 2rem;
+  padding: 0 var(--brux-space-2);
+}
+
+.brux-input--md {
+  font-size: var(--brux-font-size-sm);
+  min-height: 2.5rem;
+  padding: 0 var(--brux-space-3);
+}
+
+.brux-input--lg {
+  font-size: var(--brux-font-size-md);
+  min-height: 3rem;
+  padding: 0 var(--brux-space-3);
+}
+
+.brux-input::placeholder {
+  color: var(--brux-color-text-muted);
+}
+
+.brux-input:hover {
+  border-color: var(--brux-color-text-muted);
+}
+
+.brux-input:focus-visible {
+  outline: none;
+  border-bottom-color: var(--brux-color-accent);
+}
+
+.brux-input:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.brux-input[aria-invalid='true'] {
+  border-color: var(--brux-color-danger);
+}
+
+.brux-input::file-selector-button {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  font-weight: var(--brux-font-weight-semibold);
+  margin-inline-end: var(--brux-space-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brux-input {
+    transition: none;
+  }
+}

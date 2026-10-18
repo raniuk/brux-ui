@@ -1,0 +1,12 @@
+.brux-label {
+  color: var(--brux-color-text);
+  display: inline-block;
+  font-size: var(--brux-font-size-sm);
+  font-weight: var(--brux-font-weight-semibold);
+  line-height: var(--brux-line-height-tight);
+}
+
+.brux-label:has(+ :disabled) {
+  color: var(--brux-color-text-muted);
+  cursor: not-allowed;
+}

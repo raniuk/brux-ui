@@ -1,0 +1,44 @@
+.brux-radio-group {
+  display: grid;
+  gap: var(--brux-space-3);
+}
+
+.brux-radio-group-item {
+  background: var(--brux-color-surface);
+  border: 1px solid var(--brux-color-border);
+  border-radius: var(--brux-radius-circle);
+  cursor: pointer;
+  flex: 0 0 auto;
+  height: 1.25rem;
+  padding: 3px;
+  transition: border-color var(--brux-duration-base) var(--brux-ease-standard);
+  width: 1.25rem;
+}
+
+.brux-radio-group-item[data-state='checked'] {
+  border-color: var(--brux-color-primary);
+}
+
+.brux-radio-group-item:focus-visible {
+  outline: 2px solid var(--brux-button-focus-ring);
+  outline-offset: 2px;
+}
+
+.brux-radio-group-item:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.brux-radio-group-indicator {
+  background: var(--brux-color-primary);
+  border-radius: inherit;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brux-radio-group-item {
+    transition: none;
+  }
+}

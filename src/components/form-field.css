@@ -1,0 +1,20 @@
+.brux-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--brux-space-2);
+}
+
+.brux-form-description {
+  color: var(--brux-color-text-muted);
+  font-size: var(--brux-font-size-xs);
+  line-height: var(--brux-line-height-comfortable);
+  margin: 0;
+}
+
+.brux-form-message {
+  color: var(--brux-color-danger);
+  font-size: var(--brux-font-size-xs);
+  font-weight: var(--brux-font-weight-semibold);
+  line-height: var(--brux-line-height-comfortable);
+  margin: 0;
+}

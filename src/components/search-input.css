@@ -1,0 +1,9 @@
+.brux-search-input {
+  display: grid;
+  gap: var(--brux-space-2);
+}
+
+.brux-search-input-action {
+  align-self: center;
+  margin-right: var(--brux-space-1);
+}
