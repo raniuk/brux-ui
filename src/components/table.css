@@ -1,0 +1,86 @@
+.brux-table-container {
+  background: var(--brux-color-canvas);
+  border: 1px solid var(--brux-color-border);
+  border-radius: var(--brux-radius-md);
+  box-shadow: var(--brux-elevation-1);
+  overflow-x: auto;
+  width: 100%;
+}
+
+.brux-table {
+  background: var(--brux-color-canvas);
+  border-collapse: collapse;
+  caption-side: bottom;
+  font-size: var(--brux-font-size-sm);
+  width: 100%;
+}
+
+.brux-table-header {
+  background: var(--brux-color-surface);
+}
+
+.brux-table-header tr {
+  border-bottom: 1px solid var(--brux-color-primary);
+}
+
+.brux-table-row {
+  border-bottom: 1px solid var(--brux-color-border);
+  transition: background-color var(--brux-duration-base) var(--brux-ease-standard);
+}
+
+.brux-table-body tr:last-child {
+  border-bottom: 0;
+}
+
+.brux-table-row:hover {
+  background: var(--brux-color-surface);
+}
+
+.brux-table-row[data-state='selected'] {
+  background: color-mix(in srgb, var(--brux-color-primary) 10%, transparent);
+}
+
+.brux-table-head {
+  font-size: var(--brux-font-size-xs);
+  font-weight: var(--brux-font-weight-semibold);
+  height: 2.5rem;
+  letter-spacing: var(--brux-letter-spacing-wide);
+  padding: 0 var(--brux-space-4);
+  text-align: left;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.brux-table-cell {
+  padding: var(--brux-space-3) var(--brux-space-4);
+  vertical-align: middle;
+}
+
+.brux-table-footer {
+  background: var(--brux-color-surface);
+  border-top: 1px solid var(--brux-color-border);
+  font-weight: var(--brux-font-weight-semibold);
+}
+
+.brux-table-caption {
+  color: var(--brux-color-text-muted);
+  font-size: var(--brux-font-size-sm);
+  line-height: var(--brux-line-height-normal);
+  margin-top: var(--brux-space-4);
+}
+
+.brux-table--divided th:not(:last-child),
+.brux-table--divided td:not(:last-child) {
+  border-right: 1px solid var(--brux-color-border);
+}
+
+.brux-table--striped tbody tr:nth-child(odd) {
+  background: var(--brux-color-surface);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brux-table-row {
+    transition: none;
+  }
+}

@@ -1,0 +1,104 @@
+.brux-accordion-item {
+  border-bottom: 1px solid var(--brux-color-border);
+}
+
+.brux-accordion-item:last-child {
+  border-bottom: 0;
+}
+
+.brux-accordion-header {
+  display: flex;
+  margin: 0;
+}
+
+.brux-accordion-trigger {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: var(--brux-color-text);
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  font: inherit;
+  font-weight: var(--brux-font-weight-semibold);
+  gap: var(--brux-space-4);
+  justify-content: space-between;
+  min-height: 2.75rem;
+  padding: var(--brux-space-4) 0;
+  text-align: left;
+}
+
+.brux-accordion-trigger:hover {
+  color: var(--brux-color-primary);
+}
+
+.brux-accordion-trigger:focus-visible {
+  outline: 2px solid var(--brux-button-focus-ring);
+  outline-offset: 2px;
+}
+
+.brux-accordion-trigger:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.brux-accordion-indicator {
+  border-bottom: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  flex: 0 0 auto;
+  height: 0.5rem;
+  transform: rotate(45deg) translateY(-0.125rem);
+  transition: transform var(--brux-duration-slow) var(--brux-ease-standard);
+  width: 0.5rem;
+}
+
+.brux-accordion-trigger[data-state='open'] .brux-accordion-indicator {
+  transform: rotate(225deg) translateY(-0.125rem);
+}
+
+.brux-accordion-content {
+  color: var(--brux-color-text-muted);
+  font-size: var(--brux-font-size-sm);
+  overflow: hidden;
+}
+
+.brux-accordion-content[data-state='open'] {
+  animation: brux-accordion-down var(--brux-duration-slow) var(--brux-ease-out);
+}
+
+.brux-accordion-content[data-state='closed'] {
+  animation: brux-accordion-up var(--brux-duration-slow) var(--brux-ease-out);
+}
+
+.brux-accordion-content-inner {
+  line-height: var(--brux-line-height-normal);
+  padding: 0 0 var(--brux-space-4);
+}
+
+@keyframes brux-accordion-down {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes brux-accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+
+  to {
+    height: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brux-accordion-indicator,
+  .brux-accordion-content[data-state] {
+    animation: none;
+    transition: none;
+  }
+}

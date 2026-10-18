@@ -1,0 +1,89 @@
+.brux-tabs-list {
+  color: var(--brux-color-text-muted);
+  display: inline-flex;
+}
+
+.brux-tabs-list--underline {
+  border-bottom: 1px solid var(--brux-color-border);
+  flex-wrap: wrap;
+  gap: var(--brux-space-1);
+}
+
+.brux-tabs-list--vertical {
+  flex-direction: column;
+  gap: var(--brux-space-1);
+}
+
+.brux-tabs-trigger {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  font-size: var(--brux-font-size-sm);
+  font-weight: var(--brux-font-weight-semibold);
+  justify-content: center;
+  transition: background-color var(--brux-duration-base) var(--brux-ease-standard), border-color var(--brux-duration-base) var(--brux-ease-standard), color var(--brux-duration-base) var(--brux-ease-standard);
+}
+
+.brux-tabs-trigger:focus-visible {
+  outline: 2px solid var(--brux-button-focus-ring);
+  outline-offset: 2px;
+}
+
+.brux-tabs-trigger:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.brux-tabs-trigger--underline {
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  padding: var(--brux-space-3) var(--brux-space-4);
+}
+
+.brux-tabs-trigger--underline:hover {
+  color: var(--brux-color-text);
+}
+
+.brux-tabs-trigger--underline[data-state='active'] {
+  border-color: var(--brux-color-primary);
+  color: var(--brux-color-text);
+}
+
+.brux-tabs-trigger--vertical {
+  border-left: 2px solid transparent;
+  border-radius: var(--brux-radius-sm);
+  justify-content: start;
+  padding: var(--brux-space-2) var(--brux-space-3);
+}
+
+.brux-tabs-trigger--vertical:hover {
+  background: var(--brux-color-surface-alt);
+  color: var(--brux-color-text);
+}
+
+.brux-tabs-trigger--vertical[data-state='active'] {
+  background: var(--brux-color-surface-alt);
+  border-color: var(--brux-color-primary);
+  color: var(--brux-color-text);
+}
+
+.brux-tabs-content {
+  color: var(--brux-color-text);
+  font-size: var(--brux-font-size-sm);
+  margin-top: var(--brux-space-4);
+}
+
+.brux-tabs-content:focus-visible {
+  outline: 2px solid var(--brux-button-focus-ring);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brux-tabs-trigger {
+    transition: none;
+  }
+}
